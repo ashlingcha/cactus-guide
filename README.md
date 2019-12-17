@@ -61,7 +61,7 @@ export PATH=$MYGROUP/cactus/bin:$PATH
 SBATCH script successful for evolverMammals.txt example: 
 ```
 #!/bin/bash -l
-#BATCH --job-name="myjob"
+#SBATCH --job-name="myjob"
 #SBATCH --nodes=1
 #SBATCH -M zeus
 #SBATCH --account=pawsey0149
