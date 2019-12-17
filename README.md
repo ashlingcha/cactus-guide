@@ -84,3 +84,4 @@ cactus --maxCores 16 --binariesMode local jobStore $MYGROUP/cactus/examples/evol
 
 ```
 Time taken: 2386.51343918 seconds ie. 40 minutes 
+Output tree: ((simHuman_chr6:0.144018,(simMouse_chr6:0.084509,simRat_chr6:0.091589)mr:0.271974)Anc1:0.020593,(simCow_chr6:0.18908,simDog_chr6:0.16303)Anc2:0.032898)Anc0;
