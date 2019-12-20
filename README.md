@@ -91,7 +91,26 @@ Setting up HAL:
 module load hdf5
 cd $MYGROUP
 git clone https://github.com/ucscGenomeBrowser/kent.git
-cd kent (compile the packages as required)
+cd kent (compile the packages as required: 
+1.Go to the kent/src/lib directory.
+2. Type make. The build expects to use the GNU gcc compiler.
+3. Go to kent/src/jkOwnLib and type make.
+4. Go to kent/src/htslib and type make.
+5. Go to the application you want to build and type
+make. (If you're not sure, as a simple test
+go to kent/src/utils/fixcr and type make,
+then 'rehash' if necessary so your shell
+can find the fixcr program in ~/bin/$(MACHTYPE).
+The fixcr program changes Microsoft style
+<CR><LF> line terminations to Unix style
+<LF> terminations. Look at the "gotCr.c"
+file in the fixCr directory, and then
+do a "fixcr gotCr.c" on it.
+
+To fix error, change line 263 in kent/src/inc/common.mk to
+      MYSQLLIBS="-L/usr/lib64 -lmysqlclient"
+)
+
 
 cd $MYGROUP
 git clone https://github.com/ComparativeGenomicsToolkit/hal.git
