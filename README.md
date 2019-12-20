@@ -30,10 +30,10 @@ make -j10
 make install
 
 Install Toil required to compile cactus
-cp /group/pawsey0149/ddeeptimahanti/toil.cyg $HOME/.maali/sles12sp3/cygnet_files
+cp /group/pawsey0263/ddeeptimahanti/toil.cyg $HOME/.maali/sles12sp3/cygnet_files #requested to be copied to my group
 module load maali
 maali -t toil -v git -d
-module use /group/pawsey0149/ashling_charles/software/sles12sp3/modulefiles
+module use /group/pawsey0263/ashling_charles/software/sles12sp3/modulefiles
 module load toil
 
 cd $MYGROUP
@@ -111,3 +111,26 @@ eg. outputting newick tree
 halStats --tree /group/pawsey0149/ashling_charles/cactus/examples/evolverMammals.hal
 ```
 note if make does not work in installation - can execute commands in bin directory eg. ./halStats <halfile> 
+ 
+ 
+ 
+ Installing RepeatMasker:
+```
+
+wget http://www.repeatmasker.org/rmblast-2.9.0+-p2-x64-macosx.tar.gz
+tar zxvf rmblast-2.9.0-p2-x64-linux.tar.gz
+
+module load trf
+mkdir -p $PWD//lib/trf${MAALI_PYTHON_LIB_VERSION}/site-packages
+export TRFPATH=$PWD/lib/trf${MAALI_PYTHON_LIB_VERSION}/site-packages:$PATH
+
+wget http://www.repeatmasker.org/RepeatMasker-4.1.0.tar.gz
+gunzip RepeatMasker-4.1.0.tar.gz
+tar xvf RepeatMasker-4.1.0.tar
+
+cd RepeatMasker
+perl ./configure
+```
+ 
+ 
+ 
