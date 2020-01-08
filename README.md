@@ -30,7 +30,7 @@ make -j10
 make install
 
 Install Toil required to compile cactus
-cp /group/pawsey0263/ddeeptimahanti/toil.cyg $HOME/.maali/sles12sp3/cygnet_files #requested to be copied to my group
+cp /group/pawsey0263/ddeeptimahanti/toil.cyg $HOME/.maali/sles12sp3/cygnet_files #requested to be copied to my group              #also should be copied into same but $MYGROUP directory 
 module load maali
 maali -t toil -v git -d
 module use /group/pawsey0263/ashling_charles/software/sles12sp3/modulefiles
