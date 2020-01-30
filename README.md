@@ -39,6 +39,7 @@ module load toil
 cd $MYGROUP
 git clone https://github.com/ComparativeGenomicsToolkit/cactus.git
 cd cactus/
+module load hdf5
 export ttPrefix=$MYGROUP/kyoto-stable-20170410
 export kyotoTycoonIncl="-I${ttPrefix}/include -DHAVE_KYOTO_TYCOON=1"
 export kyotoTycoonLib="-L${ttPrefix}/lib -Wl,-rpath,${ttPrefix}/lib -lkyototycoon -lkyotocabinet -lz -lbz2 -lpthread -lm -lstdc++"
