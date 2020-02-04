@@ -1,5 +1,5 @@
 # cactus-guide
-A guide of setting up and operating cactus on cluster 
+A guide of setting up and operating cactus on PAWSEY hpc clusters 
 
 
 Installation on Zeus HPC Cluster:
@@ -53,7 +53,7 @@ export PYTHONPATH=$PWD/lib/python${MAALI_PYTHON_LIB_VERSION}/site-packages:$PYTH
 python setup.py build
 module load networkx
 python setup.py install --prefix=$PWD
-
+#cactus is still running on python2 but will soon be updated to python3
 
 export PATH=$MYGROUP/cactus/bin:$PATH
 ```
@@ -79,6 +79,7 @@ export LD_LIBRARY_PATH=/group/pawsey0149/ashling_charles/kyoto-stable-20170410/l
 
 module use /group/pawsey0149/ashling_charles/software/sles12sp3/modulefiles
 module load python toil
+module load networkx
 export PYTHONPATH=/group/pawsey0149/ashling_charles/cactus/lib/python2.7/site-packages:$PYTHONPATH
 
 cactus --maxCores 16 --binariesMode local jobStore $MYGROUP/cactus/examples/evolverMammals.txt $MYGROUP/cactus/examples/evolverMammals.hal
