@@ -131,5 +131,9 @@ cd RepeatMasker
 perl ./configure
 ```
  
+ On nimbus:
+```
+docker run -v $(pwd)/examples:/data/examples --rm -it quay.io/comparative-genomics-toolkit/cactus:latest cactus jobStore2 /data/examples/pairwisealignment.txt /data/examples/pairwisealignment.hal --binariesMode local
+```
  
  
